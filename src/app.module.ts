@@ -10,14 +10,14 @@ class SampleService2 {
         @Inject(forwardRef(() => SampleService1))
         private readonly usersService: SampleService1,
     ) {
-        console.log('OccupancyService', this.usersService);
+        console.log('SampleService2', this.usersService);
     }
 }
 
 @Resolver(() => SampleEntity)
 class SampleResolver {
     constructor(private readonly occupancyService: SampleService2) {
-        console.log('OccupancyResolver', this.occupancyService);
+        console.log('SampleResolver', this.occupancyService);
     }
 }
 
